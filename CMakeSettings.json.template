@@ -1,0 +1,56 @@
+﻿{
+  "configurations": [
+    {
+      "name": "RPi-Debug-TSControlNode",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "<your remote Raspberry Pi device>",
+      "configurationType": "Debug",
+      "remoteCMakeListsRoot": "/tmp/TSControlPanel/source",
+      "cmakeExecutable": "cmake",
+      "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\TSControlPanel\\build",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\TSControlPanel\\install",
+      "remoteBuildRoot": "/tmp/TSControlPanel/build",
+      "remoteInstallRoot": "/tmp/TSControlPanel/install",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "gcc-arm" ],
+      "intelliSenseMode": "linux-gcc-arm"
+    },
+    {
+      "name": "RPi-Debug-TSControlServer",
+      "generator": "Unix Makefiles",
+      "remoteMachineName": "<your remote Linux server machine>",
+      "configurationType": "Debug",
+      "remoteCMakeListsRoot": "/tmp/TSControlPanel/source",
+      "cmakeExecutable": "cmake",
+      "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\TSControlPanel\\build",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\TSControlPanel\\install",
+      "remoteBuildRoot": "/tmp/TSControlPanel/build",
+      "remoteInstallRoot": "/tmp/TSControlPanel/install",
+      "remoteCopySources": true,
+      "remoteCopySourcesOutputVerbosity": "Normal",
+      "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [
+        ".vs",
+        ".git"
+      ],
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "gcc-arm" ],
+      "intelliSenseMode": "linux-gcc-arm"
+    }
+  ]
+}
